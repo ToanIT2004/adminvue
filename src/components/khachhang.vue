@@ -21,7 +21,7 @@
        </tr>
      </thead>
      <tbody>
-       <tr class="text-center" v-for="(info, index) in infoUser" :key="index">
+       <tr class="text-center" v-for="(info, index) in userDisplay" :key="index">
          <td>{{ index+1 }}</td>
          <td>{{ info.lastname + ' ' +info.firstname }}</td>
          <!-- <td>{{ info.password }}</td> -->
@@ -68,22 +68,16 @@ import axios from 'axios'
        });
    },
 
+   computed:{
+    userDisplay() {
+      if(this.search.trim().length > 0) {
+          return this.infoUser.filter(user => user.email.includes(this.search.trim()))
+      }else {
+        return this.infoUser
+      }
+    }
+   },
    methods: {
-      handleInput() {
-        if(this.search.trim().length > 2) {
-          axios.post('http://127.0.0.1:8000/api/search', {search: this.search})
-          .then(res => {
-              //  this.infoEmploy = res.data;
-              // console.log(res.data);
-              this.infoUser = res.data;
-              // console.log(this.infoUser);
-              // console.log(this.infoEmploy);
-          })
-          .catch(error => console.log('Error', error))
-        }else if(this.search.trim().length == 0) {
-          window.location.reload();
-        }
-      },
      // Xử lí xóa nhân viên 
      dropEmploy(id) {
        axios.delete(`http://127.0.0.1:8000/api/user/${id}`)
