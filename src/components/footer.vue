@@ -2,9 +2,10 @@
     <div class="col-2 bg-dark text-white">
         <div align="center " class=""><b>Danh Mục</b></div>
         <router-link class="nav-link" :to="{ name: 'home' }">  <div class="buttonc mt-4"> Sản Phẩm</div> </router-link>
-        <router-link v-if="is_admin > 1" class="nav-link" :to="{ name: 'nhanvien' }">  <div class="buttonc mt-3"> Nhân viên</div> </router-link>
-        <router-link v-if="is_admin > 1" class="nav-link" :to="{ name: 'khachhang' }">  <div class="buttonc mt-3"> Khách hàng</div> </router-link>
-        <router-link v-if="is_admin > 1" class="nav-link" :to="{ name: 'khoiphuc' }"><div class="buttonc mt-3"> Khôi phục khách hàng</div></router-link>
+        <!-- v-if="is_admin > 1" Nó nằm trong nhanvien khachhang khoiphuc -->
+        <router-link class="nav-link" :to="{ name: 'nhanvien' }">  <div class="buttonc mt-3"> Nhân viên</div> </router-link>
+        <router-link class="nav-link" :to="{ name: 'khachhang' }">  <div class="buttonc mt-3"> Khách hàng</div> </router-link>
+        <router-link class="nav-link" :to="{ name: 'khoiphuc' }"><div class="buttonc mt-3"> Khôi phục khách hàng</div></router-link>
         <div class="buttonc mt-3">Doanh Thu</div>
         <div class="buttonc mt-3">Đánh Giá</div>
         <router-link class="nav-link" :to="{ name: 'doimatkhau' }"><div class="buttonc mt-3">Đổi mật khẩu</div></router-link>

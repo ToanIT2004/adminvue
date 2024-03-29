@@ -55,10 +55,10 @@ import axios from 'axios'
 
    created() {
      // Xử lý khi tài khoản là admin (2) thì mới cho vào
-     if(this.is_admin != 2) {
-       this.$router.push({name: 'home'})
-       alert('Bạn không có quyền truy cập vào mục này')
-     }
+    //  if(this.is_admin != 2) {
+    //    this.$router.push({name: 'home'})
+    //    alert('Bạn không có quyền truy cập vào mục này')
+    //  }
 
      //Lấy tất cả tài khoản khách hàng
      axios.get('http://127.0.0.1:8000/api/getUser')
