@@ -1,7 +1,7 @@
 <template>
     <footer-vue/>
     <!-- v-if="issetLocalStoge != null && issetLocalStoge > 0" -->
-    <div class="d-flex nen">
+    <div class="d-flex bg-nen">
       <header-vue/>
       <!-- v-if="issetLocalStoge != null && issetLocalStoge > 0" -->
       <router-view></router-view>
@@ -34,6 +34,11 @@ export default {
 </script>
 
 <style>
+.bg-nen{
+  background-color: #b2b2b2;
+  width: 100%;
+  height: 100%;
+}
 .nen {
   width: 100%;
   height: 100%;

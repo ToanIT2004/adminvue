@@ -7,7 +7,7 @@
           Sản Phẩm <i class="bi bi-caret-down-fill"></i>
        </button>
        </router-link>
-           <div :class="{ 'dropdowns-content mt-3': true, 'show': dropdownOpens }" @mousedown="closeDropdowns">
+           <div :class="{ 'dropdowns-content mt-3': true, 'show': dropdownOpens }" >
                <router-link class="nav-link buttonc mt-3" :to="{ name: 'nhanvien' }"> Iphone</router-link>
          <router-link class="nav-link buttonc  mt-3 " :to="{ name: '' }">  Ipad </router-link>
          <router-link class="nav-link buttonc  mt-3 " :to="{ name: '' }">  Macbook </router-link>
@@ -23,7 +23,7 @@
       </router-link>
       <div class="dropdowns " >
         <button @mousedown="toggleDropdown" class="dropbtn buttonc mt-3"> Tài khoản <i class="bi bi-caret-down-fill"></i></button>
-        <div :class="{ 'dropdowns-content mt-3': true, 'show': dropdownOpen }" @mousedown="closeDropdown">
+        <div :class="{ 'dropdowns-content mt-3': true, 'show': dropdownOpen }" >
             <router-link class="nav-link buttonc mt-3" :to="{ name: 'nhanvien' }">   Nhân viên</router-link>
       <router-link class="nav-link buttonc  mt-3 " :to="{ name: 'khachhang' }">   Khách hàng </router-link>
       <div>.</div>
@@ -31,7 +31,7 @@
         </div>
         <div class="dropdowns " >
           <button @mousedown="toggleDropdowna" class="dropbtn buttonc mt-3 "> Doanh Thu <i class="bi bi-caret-down-fill"></i></button>
-          <div :class="{ 'dropdowns-content mt-3 ': true, 'show': dropdownOpena }" @mousedown="closeDropdowna">
+          <div :class="{ 'dropdowns-content mt-3 ': true, 'show': dropdownOpena }" >
               <router-link class="nav-link buttonc mt-3" :to="{ name: '' }">   Báo Cáo</router-link>
         <router-link class="nav-link buttonc  mt-3  " :to="{ name: '' }">   Thống Kê </router-link>
         <router-link class="nav-link buttonc  mt-3  " :to="{ name: '' }">   Tồn Hàng </router-link>

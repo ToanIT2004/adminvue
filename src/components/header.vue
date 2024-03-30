@@ -13,7 +13,7 @@
         <div class="col-6">
           <div class="dropdown enten" style="float: right;">
             <button @mousedown="toggleDropdown" class="dropbtn btn btn-warning"> <i class="bi bi-person-circle fs-5"></i> <i class="bi bi-caret-down-fill"></i></button>
-            <div :class="{ 'dropdown-content mt-3': true, 'show': dropdownOpen }" @mousedown="closeDropdown">
+            <div :class="{ 'dropdown-content mt-3': true, 'show': dropdownOpen }" >
               <a class="dropdown-link" href="#">Thông Tin</a>
              <router-link class="nav-link dropdown-link" :to="{ name: 'doimatkhau' }">Đổi mật khẩu</router-link>
               <a class="dropdown-link" href="#">   <div @click="exitUser()" >Đăng xuất</div></a>
