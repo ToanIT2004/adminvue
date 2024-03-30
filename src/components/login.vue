@@ -71,6 +71,8 @@ export default {
    align-items: center;
    height: 100vh;
    margin-top: -100px; /* Thử tăng giá trị margin */
+   margin-left: 600px;
+  
  }
 
 .form {
@@ -122,7 +124,7 @@ export default {
  .message, 
  .signin {
    font-size: 14.5px;
-   color: rgba(255, 255, 255, 0.7);
+   color: rgba(218, 200, 200, 0.7);
  }
  
  .signin {

@@ -48,7 +48,12 @@ const admin = [
       path: '/doimatkhau',
       name: 'doimatkhau',
       component: () => import('../components/doimatkhau.vue')
-   }
+   },
+   {
+      path: '/trangchu',
+      name: 'trangchu',
+      component: () => import('../components/trangchu.vue')
+   },
 ];
 
 export default admin;
