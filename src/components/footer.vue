@@ -1,31 +1,26 @@
 <template>
-  <div class="col-2 card  text-white">
+  <div style="min-height: 480px;" class="col-2 card text-white">
       <div align="center" class="mt-3"><h3><b>Danh Mục</b></h3></div>
       <div align="center">
         <div class="dropdowns " > <router-link class="nav-link  " :to="{ name: 'home' }">
           <button @mousedown="toggleDropdowns" class="dropbtn buttonc mt-4">
-          Sản Phẩm <i class="bi bi-caret-down-fill"></i>
-       </button>
+            Sản Phẩm <i class="bi bi-caret-down-fill"></i>
+        </button>
        </router-link>
-           <div :class="{ 'dropdowns-content mt-3': true, 'show': dropdownOpens }" >
-               <router-link class="nav-link buttonc mt-3" :to="{ name: 'nhanvien' }"> Iphone</router-link>
-         <router-link class="nav-link buttonc  mt-3 " :to="{ name: '' }">  Ipad </router-link>
-         <router-link class="nav-link buttonc  mt-3 " :to="{ name: '' }">  Macbook </router-link>
-         <router-link class="nav-link buttonc  mt-3 " :to="{ name: '' }">  Appwatch </router-link>
-         <div>.</div>
+           <div :class="{ 'dropdowns-content mt-3': true, 'show': dropdownOpens }">
+              <router-link class="nav-link buttonc  mt-3 " :to="{ name: 'them' }">THÊM SP</router-link>
+              <router-link class="nav-link buttonc mt-3" :to="{ name: 'home' }">HÀNG HÓA</router-link>
+              <router-link class="nav-link buttonc  mt-3 " :to="{ name: 'chitiet' }">CHI TIẾT</router-link>
            </div >
-           </div>
-   
-      <!-- v-if="is_admin > 1" Nó nằm trong nhóm nhân viên khách hàng khôi phục -->
-  
-      <router-link class="nav-link" :to="{ name: 'khoiphuc' }">
-          <div class="buttonc mt-3"> Khôi phục khách hàng</div>
-      </router-link>
-      <div class="dropdowns " >
+      </div>
+
+
+      <div v-if="is_admin > 1" class="dropdowns " >
         <button @mousedown="toggleDropdown" class="dropbtn buttonc mt-3"> Tài khoản <i class="bi bi-caret-down-fill"></i></button>
         <div :class="{ 'dropdowns-content mt-3': true, 'show': dropdownOpen }" >
-            <router-link class="nav-link buttonc mt-3" :to="{ name: 'nhanvien' }">   Nhân viên</router-link>
-      <router-link class="nav-link buttonc  mt-3 " :to="{ name: 'khachhang' }">   Khách hàng </router-link>
+            <router-link  class="nav-link buttonc mt-3" :to="{ name: 'nhanvien' }">   Nhân viên</router-link>
+            <router-link class="nav-link buttonc  mt-3 " :to="{ name: 'khachhang' }">KH HÀNG</router-link>
+            <router-link class="nav-link buttonc  mt-3" :to="{ name: 'khoiphuc' }">Khôi phục</router-link>
       <div>.</div>
         </div>
         </div>
@@ -33,6 +28,7 @@
           <button @mousedown="toggleDropdowna" class="dropbtn buttonc mt-3 "> Doanh Thu <i class="bi bi-caret-down-fill"></i></button>
           <div :class="{ 'dropdowns-content mt-3 ': true, 'show': dropdownOpena }" >
               <router-link class="nav-link buttonc mt-3" :to="{ name: '' }">   Báo Cáo</router-link>
+              
         <router-link class="nav-link buttonc  mt-3  " :to="{ name: '' }">   Thống Kê </router-link>
         <router-link class="nav-link buttonc  mt-3  " :to="{ name: '' }">   Tồn Hàng </router-link>
         <div>.</div>
@@ -61,13 +57,6 @@ export default {
   },
 
   methods: {
-    exitUser() {
-      sessionStorage.clear();
-      alert('Đăng xuất thành công');
-      this.$router.push({name: 'login'});
-      window.location.reload();
-    },
-
     toggleDropdown() {
       this.dropdownOpen = !this.dropdownOpen;
     },
@@ -160,7 +149,6 @@ export default {
 }
 .card {
   width: auto;
-
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   background: linear-gradient(293deg,rgb(96, 229, 255) 30%,  rgb(153, 153, 253) 70%);
  }

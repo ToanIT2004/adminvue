@@ -1,9 +1,7 @@
 <template>
-    <footer-vue/>
-    <!-- v-if="issetLocalStoge != null && issetLocalStoge > 0" -->
+    <footer-vue v-if="issetLocalStoge != null && issetLocalStoge > 0"/>
     <div class="d-flex bg-nen">
-      <header-vue/>
-      <!-- v-if="issetLocalStoge != null && issetLocalStoge > 0" -->
+      <header-vue v-if="issetLocalStoge != null && issetLocalStoge > 0"/>
       <router-view></router-view>
     </div>
 </template>
@@ -25,11 +23,11 @@ export default {
     }
   },
 
-  // created() {
-  //   if(this.issetLocalStoge === null && this.issetLocalStoge < 1) {
-  //     this.$router.push({ name: 'login' }); 
-  //   }
-  // },
+  created() {
+    if(this.issetLocalStoge === null && this.issetLocalStoge < 1) {
+      this.$router.push({ name: 'login' }); 
+    }
+  },
 }
 </script>
 

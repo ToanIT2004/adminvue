@@ -67,19 +67,16 @@ export default {
 <style>
 .center {
    display: flex;
-   justify-content: center;
    align-items: center;
-   height: 100vh;
-   margin-top: -100px; /* Thử tăng giá trị margin */
-   margin-left: 600px;
-  
+   height: 100vh;  
+   margin: 0 auto;
  }
 
 .form {
    display: flex;
    flex-direction: column;
    gap: 10px;
-   max-width: 350px;
+    width: 350px;
    padding: 20px;
    border-radius: 20px;
    position: relative;

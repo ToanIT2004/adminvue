@@ -54,6 +54,11 @@ const admin = [
       name: 'trangchu',
       component: () => import('../components/trangchu.vue')
    },
+   {
+      path: '/chitiet',
+      name: 'chitiet',
+      component: () => import('../components/chitiet.vue')
+   },
 ];
 
 export default admin;

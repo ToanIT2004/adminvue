@@ -35,6 +35,13 @@ export default {
     };
   },
   methods: {
+    // Đăng xuất khách hàng
+    exitUser() {
+      sessionStorage.clear();
+      this.$router.push({name: 'login'});
+      window.location.reload();
+    },
+
     toggleDropdown() {
       this.dropdownOpen = !this.dropdownOpen;
     },
