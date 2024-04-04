@@ -59,6 +59,11 @@ const admin = [
       name: 'chitiet',
       component: () => import('../components/chitiet.vue')
    },
+   {
+      path: '/suasp/:id',
+      name: 'suasp',
+      component: () => import('../components/them.vue')
+   },
 ];
 
 export default admin;

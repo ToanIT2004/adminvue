@@ -56,8 +56,8 @@
           <td>{{ item.giamgia }}</td>
           <td>{{ item.slton }}</td>
           <td>
-            <button class="btn btn-primary">SỬA</button> <br>
-            <button class="btn btn-danger mt-2">XÓA</button>
+            <router-link class="btn btn-primary" :to="{ name: 'suasp', params: { id: item.id } }">SỬA</router-link>
+            <button @click="deleteProduct(item.id)" class="btn btn-danger mt-2">XÓA</button>
           </td>
         </tr>
     </tbody>
@@ -125,6 +125,19 @@ export default {
     // Chỗ này nó sẽ tự động chạy vào public
     getImageUrl(item) {
       return `http://127.0.0.1:8000${item}`; // Đường dẫn của Laravel đến hình ảnh
+    },
+
+    // Hàm xóa sản phẩm
+    deleteProduct(item) { 
+      console.log(item);
+       axios.delete('http://127.0.0.1:8000/api/product/' + item)
+        .then(res => {
+          if(res.status === 200) {
+            alert('Xóa sản phẩm thành công')
+            window.location.reload();
+          }
+        })
+        .catch(error => console.log(error))
     }
   },
 }
